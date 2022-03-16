@@ -1,0 +1,62 @@
+##inputForm##
+<div id="contentFrame">
+	<div id="itemTitle" style="width:120px;">
+		<label title="{##&modulSelect::customer_nameTitle##}">{##&modulSelect::customer_nameTitle##}</label>
+	</div>
+	<div id="itemView">
+		<input type="text" value="{##@modulSelect::x_customer_name##}" class="form-control" maxlength="100" size="62" id="x_customer_name" name="x_customer_name">
+	</div>
+	<div style="clear:both;height: 1px;"></div>
+	<div id="itemTitle" style="width:120px;">
+		<label title="{##&modulSelect::how_many_peopleTitle##}">{##&modulSelect::how_many_peopleTitle##}</label>
+	</div>
+	<div id="itemView">
+		<input type="text" value="{##@modulSelect::x_how_many_people##}" class="form-control" maxlength="4" size="4" id="x_how_many_people" name="x_how_many_people">
+	</div>
+	<div style="clear:both;height: 1px;"></div>
+	<div id="itemTitle" style="width:120px;">
+		<label title="{##@modulSelect::transpor_dateLabel##}">{##&modulSelect::transport_dateTitle##}</label>
+	</div>
+	<div id="itemView">
+		<input type="date" class="form-control" name="x_transport_date" id="x_transport_date" size="10" maxlength="10" value="{##@modulSelect::x_transport_date##}">
+	</div>
+	<div style="clear:both;height: 1px;"></div>
+
+</div>
+##/inputForm##
+##listHeadForm##
+<div id="listHeader">
+	<div id="itemView" style="width:150px;">{##@modulSelect::customer_nameTitle##}</div>
+	<div id="itemView" style="width:60px;">{##@modulSelect::how_many_peopleTitle##}</div>
+	<div id="itemView" style="width:150px;">{##@modulSelect::transport_dateTitle##}</div>
+	<div id="itemView" style="width:100px;">{##@modulSelect::actionCountTitle##}</div>
+	<div id="itemView" style="float:left;width:180px;"></div>
+	<div style="clear:both;height: 1px;"></div>
+</div>
+##/listHeadForm##
+##listItemForm##
+<div id="listItem" class="{##@modulSelect::bgcolor##}">
+	<div id="itemView" style="width:150px;">{##@modulSelect::x_customer_name##}</div>
+	<div id="itemView" style="width:60px;">{##@modulSelect::x_how_many_people##}</div>
+	<div id="itemView" style="width:150px;">{##@modulSelect::x_transport_date##}</div>
+	<div id="itemView" style="width:100px;text-align:right;">{##@modulSelect::x_actionCount##}</div>
+	<div id="itemViewRight" style="float:left;width:180px;">{##@modulSelect::x_submenu##}</div>
+	<div style="clear:both;height: 1px;"></div>
+</div>
+##/listItemForm##
+##listFilterForm##
+<div id="searchFilterTitle">
+	<label title="{##@modulSelect::how_many_peopleTitle##}">{##&modulSelect::how_many_peopleTitle##}</label><br>
+	<select class="form-control" id="s_how_many_people_filter" name="s_how_many_people_filter" onfocusout="this.form.submit();">
+		{##@modulSelect::s_how_many_people_filter##}
+	</select><br>
+	<input class="form-control" type="text" value="{##@modulSelect::s_how_many_people##}" maxlength="10" size="10" id="s_how_many_people" name="s_how_many_people" onfocusout="this.form.submit();">
+</div>
+<div id="searchFilterTitle">
+	<label title="{##@modulSelect::transport_dateTitle##}">{##&modulSelect::transport_dateTitle##}</label><br>
+	<select class="form-control" id="s_transport_date_filter" name="s_transport_date_filter" onfocusout="this.form.submit();">
+		{##@modulSelect::s_transport_date_filter##}
+	</select><br>
+	<input class="form-control" type="date" value="{##@modulSelect::s_transport_date##}" maxlength="10" size="10" id="s_transport_date" name="s_transport_date" onfocusout="this.form.submit();">
+</div>
+##/listFilterForm##

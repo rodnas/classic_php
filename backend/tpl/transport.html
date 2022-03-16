@@ -1,0 +1,83 @@
+##inputForm##
+<div id="contentFrame">
+	<div id="itemTitle" style="width:100px;">
+		<label title="{##&modulSelect::vehicleIDTitle##}">{##&modulSelect::vehicleIDTitle##}</label>
+	</div>
+	<div id="itemView">
+		<select {##&modulSelect::disabled##} class="form-control" style="width:150px;" id="x_vehicleID" name="x_vehicleID">{##@modulSelect::x_vehicleID##}</select>
+	</div>
+	<div style="clear:both;height: 1px;"></div>
+	<div id="itemTitle" style="width:100px;">
+		<label title="{##&modulSelect::driverIDTitle##}">{##&modulSelect::driverIDTitle##}</label>
+	</div>
+	<div id="itemView">
+		<select {##&modulSelect::disabled##} class="form-control" style="width:150px;" id="x_driverID" name="x_driverID">{##@modulSelect::x_driverID##}</select>
+	</div>
+	<div style="clear:both;height: 1px;"></div>
+	<div id="itemTitle" style="width:100px;">
+		<label title="{##&modulSelect::cargoIDTitle##}">{##&modulSelect::cargoIDTitle##}</label>
+	</div>
+	<div id="itemView">
+		<select {##&modulSelect::disabled##} class="form-control" style="width:150px;" id="x_cargoID" name="x_cargoID">{##@modulSelect::x_cargoID##}</select>
+	</div>
+	<div style="clear:both;height: 1px;"></div>
+	<div id="itemTitle" style="width:100px;">
+		<label title="{##&modulSelect::passangerIDTitle##}">{##&modulSelect::passangerIDTitle##}</label>
+	</div>
+	<div id="itemView">
+		<select {##&modulSelect::disabled##} class="form-control" style="width:150px;" id="x_passangerID" name="x_passangerID">{##@modulSelect::x_passangerID##}</select>
+	</div>
+	<div style="clear:both;height: 1px;"></div>
+
+	<div id="itemTitle" style="width:100px;">
+		<label title="{##&modulSelect::order_dateTitle##}">{##&modulSelect::order_dateTitle##}</label>
+	</div>
+	<div id="itemView">
+		<input type="date" value="{##@modulSelect::x_order_date##}" class="form-control" maxlength="100" size="62" id="x_order_date" name="x_order_date">
+	</div>
+	<div style="clear:both;height: 1px;"></div>
+</div>
+##/inputForm##
+##listHeadForm##
+<div id="listHeader">
+	<div id="itemView" style="width:100px;">{##@modulSelect::vehicleNameTitle##}</div>
+	<div id="itemView" style="width:100px;">{##@modulSelect::driverNameTitle##}</div>
+	<div id="itemView" style="width:100px;">{##@modulSelect::cargoNameTitle##}</div>
+	<div id="itemView" style="width:100px;">{##@modulSelect::passangerNameTitle##}</div>
+	<div id="itemView" style="width:100px;">{##@modulSelect::order_dateTitle##}</div>
+	<div id="itemView" style="float:left;width:180px;"></div>
+	<div style="clear:both;height: 1px;"></div>
+</div>
+##/listHeadForm##
+##listItemForm##
+<div id="listItem" class="{##@modulSelect::bgcolor##}">
+	<div id="itemView" style="width:100px;">{##@modulSelect::x_vehicleName##}</div>
+	<div id="itemView" style="width:100px;">{##@modulSelect::x_driverName##}</div>
+	<div id="itemView" style="width:100px;">{##@modulSelect::x_cargoName##}</div>
+	<div id="itemView" style="width:100px;">{##@modulSelect::x_passangerName##}</div>
+	<div id="itemView" style="width:100px;">{##@modulSelect::x_order_date##}</div>
+	<div id="itemViewRight" style="float:left;width:180px;">{##@modulSelect::x_submenu##}</div>
+	<div style="clear:both;height: 1px;"></div>
+</div>
+##/listItemForm##
+##listFilterForm##
+<div id="searchFilterTitle">
+	<label title="{##@modulSelect::vehicleIDTitle##}">{##&modulSelect::vehicleIDTitle##}</label><br>
+	<select class="form-control" style="width:180px;" id="s_vehicleID" name="s_vehicleID" onchange="this.form.submit();">
+		{##@modulSelect::s_vehicleID##}
+	</select>
+</div>
+<div id="searchFilterTitle">
+	<label title="{##@modulSelect::driverIDTitle##}">{##&modulSelect::driverIDTitle##}</label><br>
+	<select class="form-control" style="width:180px;" id="s_driverID" name="s_driverID" onchange="this.form.submit();">
+		{##@modulSelect::s_driverID##}
+	</select>
+</div>
+<div id="searchFilterTitle">
+	<label title="{##@modulSelect::birth_yearTitle##}">{##&modulSelect::birth_yearTitle##}</label><br>
+	<select class="form-control" id="s_birth_year_filter" name="s_birth_year_filter" onfocusout="this.form.submit();">
+		{##@modulSelect::s_birth_year_filter##}
+	</select><br>
+	<input class="form-control" type="text" value="{##@modulSelect::s_birth_year##}" maxlength="10" size="10" id="s_birth_year" name="s_birth_year" onfocusout="this.form.submit();">
+</div>
+##/listFilterForm##

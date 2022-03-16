@@ -1,0 +1,155 @@
+##inputForm##
+<div id="contentFrame">
+	<div id="itemTitle" style="width:120px;">
+		<label title="{##@modulSelect::core_userstitleIDLabel##}">{##&modulSelect::core_userstitleIDTitle##}</label>
+	</div>
+	<div id="itemView">
+		<select class="form-control" style="width:150px;" id="x_core_userstitleID" name="x_core_userstitleID">{##@modulSelect::x_core_userstitleID##}</select>
+	</div>
+	<div style="clear:both;height: 1px;"></div>
+	<div id="itemTitle" style="width:120px;">
+		<label title="{##@modulSelect::surnameLabel##}">{##&modulSelect::surnameTitle##}</label>
+	</div>
+	<div id="itemView">
+		<input class="form-control" type="text" value="{##@modulSelect::x_surname##}" maxlength="40" size="42" id="x_surname" name="x_surname">
+	</div>
+	<div style="clear:both;height: 1px;"></div>
+	<div id="itemTitle" style="width:120px;">
+		<label title="{##@modulSelect::forenameLabel##}">{##&modulSelect::forenameTitle##}</label>
+	</div>
+	<div id="itemView">
+		<input class="form-control" type="text" value="{##@modulSelect::x_forename##}" maxlength="40" size="42" id="x_forename" name="x_forename">
+		</div>
+	<div style="clear:both;height: 1px;"></div>
+	<div id="itemTitle" style="width:120px;">
+		<label title="{##@modulSelect::emailLabel##}">{##&modulSelect::emailTitle##}</label>
+	</div>
+	<div id="itemView">
+		<input class="form-control" type="text" value="{##@modulSelect::x_email##}" maxlength="40" size="42" id="x_email" name="x_email">
+	</div>
+	<div style="clear:both;height: 1px;"></div>
+	<div id="itemTitle" style="width:120px;">
+		<label title="{##@modulSelect::nicknameLabel##}">{##&modulSelect::nicknameTitle##}</label>
+	</div>
+	<div id="itemView">
+		<input class="form-control" type="text" value="{##@modulSelect::x_nickname##}" maxlength="40" size="42" id="x_nickname" name="x_nickname">
+	</div>
+	<div style="clear:both;height: 1px;"></div>
+	<{##modulSelect##}_x_password>
+	<div id="itemTitle" style="width:120px;">
+		<label title="{##@modulSelect::passwordLabel##}">{##&modulSelect::passwordTitle##}</label>
+	</div>
+	<div id="itemView">
+		<input class="form-control" type="password" value="{##@modulSelect::x_password##}" maxlength="40" size="42" id="x_password" name="x_password">
+	</div>
+	<div style="clear:both;height: 1px;"></div>
+	</{##modulSelect##}_x_password>
+	<{##modulSelect##}_x_password2>
+	<div id="itemTitle" style="width:120px;">
+		<label title="{##@modulSelect::password2Label##}">{##&modulSelect::password2Title##}</label>
+	</div>
+	<div id="itemView">
+		<input class="form-control" type="password" value="" maxlength="40" size="42" id="x_password2" name="x_password2">
+	</div>
+	<div style="clear:both;height: 1px;"></div>
+	</{##modulSelect##}_x_password2>
+	<{##modulSelect##}_x_core_groups>
+	<div id="itemTitle" style="width:120px;">
+		<label title="{##@modulSelect::core_groupsIDLabel##}">{##&modulSelect::core_groupsIDTitle##}</label>
+	</div>
+	<div id="itemView">
+		<select class="form-control" style="width:150px;" id="x_core_groupsID" name="x_core_groupsID">{##@modulSelect::x_core_groupsID##}</select>
+	</div>
+	<div style="clear:both;height: 1px;"></div>
+	</{##modulSelect##}_x_core_groups>
+	<{##modulSelect##}_x_newsletter>
+	<div id="itemTitle" style="width:120px;">
+		<label title="{##@modulSelect::newsletterLabel##}">{##&modulSelect::newsletterTitle##}</label>
+	</div>
+	<div id="itemView">
+		<INPUT class="form-control" NAME="x_newsletter" TYPE="checkbox" {##@modulSelect::x_newsletter##}>
+	</div>
+	<div style="clear:both;height: 1px;"></div>
+	</{##modulSelect##}_x_newsletter>
+</div>
+##/inputForm##
+##passchangeForm##
+<div id="contentFrame">
+	<div id="itemTitle" style="width:150px;">
+		<label title="{##@modulSelect::oldpasswordLabel##}">{##&modulSelect::oldpasswordTitle##}</label>
+	</div>
+	<div id="itemView">
+		<input class="form-control" type="password" value="" maxlength="40" size="42" id="x_oldpassword" name="x_oldpassword">
+	</div>
+	<div style="clear:both;height: 1px;"></div>
+	<div id="itemTitle" style="width:150px;">
+		<label title="{##@modulSelect::passwordLabel##}">{##&modulSelect::passwordTitle##}</label>
+	</div>
+	<div id="itemView">
+		<input class="form-control" type="password" value="" maxlength="40" size="42" id="x_password" name="x_password">
+	</div>
+	<div style="clear:both;height: 1px;"></div>
+	<div id="itemTitle" style="width:150px;">
+		<label title="{##@modulSelect::password2Label##}">{##&modulSelect::password2Title##}</label>
+	</div>
+	<div id="itemView">
+		<input class="form-control" type="password" value="" maxlength="40" size="42" id="x_password2" name="x_password2">
+	</div>
+	<div style="clear:both;height: 1px;"></div>
+</div>
+##/passchangeForm##
+##listHeadForm##
+<div id="listHeader">
+	<{##modulSelect##}_x_core_localserverID>
+	<div id="itemView" style="width:90px;">{##@modulSelect::core_localserverIDTitle##}</div>
+	</{##modulSelect##}_x_core_localserverID>
+	<div style="clear:both;"></div>
+	<{##modulSelect##}_x_core_userstitleID>
+	<div id="itemView" style="width:70px;">{##@modulSelect::core_userstitleIDTitle##}</div>
+	</{##modulSelect##}_x_core_userstitleID>
+	<div id="itemView" style="width:120px;">{##@modulSelect::nicknameTitle##}</div>
+	<{##modulSelect##}_x_core_groupsID>
+	<div id="itemView" style="width:80px;">{##@modulSelect::core_groupsIDTitle##}</div>
+	<div id="itemView" style="width:60px;">{##@modulSelect::rightsCountTitle##}</div>
+	</{##modulSelect##}_x_core_groupsID>
+	<{##modulSelect##}_x_insertWhen>
+	<div id="itemView" style="width:120px;">{##@modulSelect::insertWhenTitle##}</div>
+	</{##modulSelect##}_x_insertWhen>
+	<div style="clear:both;"></div>
+</div>
+##/listHeadForm##
+##listItemForm##
+<div id="listItem" class="{##@modulSelect::bgcolor##}">
+	<{##modulSelect##}_x_core_userstitleID>
+	<div id="itemView" style="width:70px;">{##@modulSelect::x_core_userstitle##}</div>
+	</{##modulSelect##}_x_core_userstitleID>
+	<div id="itemView" style="width:120px;">{##@modulSelect::x_nickname##}</div>
+	<{##modulSelect##}_x_core_groupsID>
+	<div id="itemView" style="width:80px;">{##@modulSelect::x_core_groups##}</div>
+	<div id="itemRightView" style="width:60px;">{##@modulSelect::x_rightsCount##}</div>
+	</{##modulSelect##}_x_core_groupsID>
+	<{##modulSelect##}_x_insertWhen>
+	<div id="itemView" style="width:120px;">{##@modulSelect::x_insertWhen##}</div>
+	</{##modulSelect##}_x_insertWhen>
+	<div style="float:left;width:180px;" class="{##@modulSelect::bgcolor##} itemViewRight">{##@modulSelect::x_submenu##}</div>
+	<div style="clear:both;"></div>
+</div>
+##/listItemForm##
+##listFilterForm##
+<form method="post" name="searchFilterform" action="index.php?modulAction=list">
+<div id="searchFilterTitle">
+	<label title="{##@modulSelect::core_userstitleTitle##}">{##&modulSelect::core_userstitleIDTitle##}</label>
+	<select class="form-control" style="width:120px;" id="s_core_userstitleID" name="s_core_userstitleID" onchange="this.form.submit();">
+		{##@modulSelect::s_core_userstitleID##}
+	</select>
+</div>
+<{##modulSelect##}_x_core_groupsID>
+<div id="searchFilterTitle">
+	<label title="{##@modulSelect::core_groupsTitle##}">{##&modulSelect::core_groupsIDTitle##}</label>
+	<select class="form-control" style="width:120px;" id="s_core_groupsID" name="s_core_groupsID" onchange="this.form.submit();">
+		{##@modulSelect::s_core_groupsID##}
+	</select>
+</div>
+</{##modulSelect##}_x_core_groupsID>
+</form>
+##/listFilterForm##

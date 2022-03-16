@@ -1,0 +1,60 @@
+##inputForm##
+<div id="contentFrame">
+	<div id="itemTitle" style="width:100px;">
+		<label title="{##&modulSelect::nameTitle##}">{##&modulSelect::nameTitle##}</label>
+	</div>
+	<div id="itemView">
+		<input type="text" value="{##@modulSelect::x_name##}" class="form-control" maxlength="100" size="62" id="x_name" name="x_name">
+	</div>
+	<div style="clear:both;height: 1px;"></div>
+	<div id="itemTitle" style="width:100px;">
+		<label title="{##&modulSelect::birth_yearTitle##}">{##&modulSelect::birth_yearTitle##}</label>
+	</div>
+	<div id="itemView">
+		<input type="text" value="{##@modulSelect::x_birth_year##}" class="form-control" maxlength="4" size="4" id="x_birth_year" name="x_birth_year">
+	</div>
+	<div style="clear:both;height: 1px;"></div>
+	<div id="itemTitle" style="width:100px;">
+		<label title="{##&modulSelect::license_typeIDTitle##}">{##&modulSelect::license_typeIDTitle##}</label>
+	</div>
+	<div id="itemView">
+		<select {##&modulSelect::disabled##} class="form-control" style="width:150px;" id="x_license_typeID" name="x_license_typeID">{##@modulSelect::x_license_typeID##}</select>
+	</div>
+	<div style="clear:both;height: 1px;"></div>
+</div>
+##/inputForm##
+##listHeadForm##
+<div id="listHeader">
+	<div id="itemView" style="width:200px;">{##@modulSelect::nameTitle##}</div>
+	<div id="itemView" style="width:100px;">{##@modulSelect::birth_yearTitle##}</div>
+	<div id="itemView" style="width:100px;">{##@modulSelect::license_typeNameTitle##}</div>
+	<div id="itemView" style="width:100px;">{##@modulSelect::actionCountTitle##}</div>
+	<div id="itemView" style="float:left;width:180px;"></div>
+	<div style="clear:both;height: 1px;"></div>
+</div>
+##/listHeadForm##
+##listItemForm##
+<div id="listItem" class="{##@modulSelect::bgcolor##}">
+	<div id="itemView" style="width:200px;">{##@modulSelect::x_name##}</div>
+	<div id="itemView" style="width:100px;">{##@modulSelect::x_birth_year##}</div>
+	<div id="itemView" style="width:100px;">{##@modulSelect::x_license_typeName##}</div>
+	<div id="itemView" style="width:100px;text-align:right;">{##@modulSelect::x_actionCount##}</div>
+	<div id="itemViewRight" style="float:left;width:180px;">{##@modulSelect::x_submenu##}</div>
+	<div style="clear:both;height: 1px;"></div>
+</div>
+##/listItemForm##
+##listFilterForm##
+<div id="searchFilterTitle">
+	<label title="{##@modulSelect::birth_yearTitle##}">{##&modulSelect::birth_yearTitle##}</label><br>
+	<select class="form-control" id="s_birth_year_filter" name="s_birth_year_filter" onfocusout="this.form.submit();">
+		{##@modulSelect::s_birth_year_filter##}
+	</select><br>
+	<input class="form-control" type="text" value="{##@modulSelect::s_birth_year##}" maxlength="10" size="10" id="s_birth_year" name="s_birth_year" onfocusout="this.form.submit();">
+</div>
+<div id="searchFilterTitle">
+	<label title="{##@modulSelect::license_typeIDTitle##}">{##&modulSelect::license_typeIDTitle##}</label><br>
+	<select class="form-control" style="width:180px;" id="s_license_typeID" name="s_license_typeID" onchange="this.form.submit();">
+		{##@modulSelect::s_license_typeID##}
+	</select>
+</div>
+##/listFilterForm##

@@ -1,0 +1,86 @@
+##inputForm##
+<div id="contentFrame"{$config[marginLeft]}>
+	<div id="itemTitle" class="col-sm-3">
+		<label title="{##&modulSelect::vehicle_typeIDTitle##}">{##&modulSelect::vehicle_typeIDTitle##}</label>
+	</div>
+	<div id="itemView" class="col-sm-2">
+		<select {##&modulSelect::disabled##} class="form-control" style="width:150px;" id="x_vehicle_typeID" name="x_vehicle_typeID">{##@modulSelect::x_vehicle_typeID##}</select>
+	</div>
+	<div style="clear:both;height: 1px;"></div>
+	<div id="itemTitle" class="col-sm-3">
+		<label title="{##&modulSelect::nameTitle##}">{##&modulSelect::lpnTitle##}</label>
+	</div>
+	<div id="itemView" class="col-sm-2">
+		<input {##&modulSelect::readonly##} class="form-control" type="text" value="{##@modulSelect::x_lpn##}" maxlength="6" size="6" id="x_lpn" name="x_lpn">
+	</div>
+	<div style="clear:both;height: 1px;"></div>
+	<div id="itemTitle" class="col-sm-3">
+		<label title="{##&modulSelect::start_yearTitle##}">{##&modulSelect::start_yearTitle##}</label>
+	</div>
+	<div id="itemView" class="col-sm-2">
+		<input {##&modulSelect::readonly##} class="form-control" type="text" value="{##@modulSelect::x_start_year##}" maxlength="4" size="4" id="x_start_year" name="x_start_year">
+	</div>
+	<div style="clear:both;height: 1px;"></div>
+	<div id="itemTitle" class="col-sm-3">
+		<label title="{##&modulSelect::personTitle##}">{##&modulSelect::personTitle##}</label>
+	</div>
+	<div id="itemView" class="col-sm-2">
+		<input {##&modulSelect::readonly##} class="form-control" type="text" value="{##@modulSelect::x_person##}" maxlength="2" size="2" id="x_person" name="x_person">
+	</div>
+	<div style="clear:both;height: 1px;"></div>
+	<div id="itemTitle" class="col-sm-3">
+		<label title="{##&modulSelect::max_weightTitle##}">{##&modulSelect::max_weightTitle##}</label>
+	</div>
+	<div id="itemView" class="col-sm-2">
+		<input {##&modulSelect::readonly##} class="form-control" type="text" value="{##@modulSelect::x_max_weight##}" maxlength="4" size="4" id="x_max_weight" name="x_max_weight">
+	</div>
+	<div style="clear:both;height: 1px;"></div>
+</div>
+##/inputForm##
+##listHeadForm##
+<div id="listHeader">
+	<div id="itemView" style="width:250px;">{##@modulSelect::vehicle_typeNameTitle##}</div>
+	<div id="itemView" style="width:100px;">{##@modulSelect::lpnTitle##}</div>
+	<div id="itemView" style="width:180px;">{##@modulSelect::start_yearTitle##}</div>
+	<div id="itemView" style="float:left;width:180px;"></div>
+	<div style="clear:both;height: 1px;"></div>
+</div>
+##/listHeadForm##
+##listItemForm##
+<div id="listItem" class="{##@modulSelect::bgcolor##}">
+	<div id="itemView" style="width:250px;">{##@modulSelect::x_vehicle_typeName##} ({##@modulSelect::x_person##} fő) ({##@modulSelect::x_max_weight##} Kg)</div>
+	<div id="itemView" style="width:100px;">{##@modulSelect::x_lpn##}</div>
+	<div id="itemView" style="width:180px;">{##@modulSelect::x_start_year##}</div>
+	<div id="itemViewRight" style="float:left;width:180px;">{##@modulSelect::x_submenu##}</div>
+	<div style="clear:both;height: 1px;"></div>
+</div>
+##/listItemForm##
+##listFilterForm##
+<div id="searchFilterTitle">
+	<label title="{##@modulSelect::vehicle_typeIDTitle##}">{##&modulSelect::vehicle_typeIDTitle##}</label>
+	<select class="form-control" style="width:180px;" id="s_vehicle_typeID" name="s_vehicle_typeID" onchange="this.form.submit();">
+		{##@modulSelect::s_vehicle_typeID##}
+	</select>
+</div>
+<div id="searchFilterTitle">
+	<label title="{##@modulSelect::start_yearTitle##}">{##&modulSelect::start_yearTitle##}</label>
+	<select class="form-control" id="s_start_year_filter" name="s_start_year_filter" onfocusout="this.form.submit();">
+		{##@modulSelect::s_start_year_filter##}
+	</select><br>
+	<input class="form-control" type="text" value="{##@modulSelect::s_start_year##}" maxlength="10" size="10" id="s_start_year" name="s_start_year" onfocusout="this.form.submit();">
+</div>
+<div id="searchFilterTitle" style="width:100px">
+	<label title="{##@modulSelect::personTitle##}">{##&modulSelect::personTitle##}</label>
+	<select class="form-control" id="s_person_filter" name="s_person_filter" onfocusout="this.form.submit();">
+		{##@modulSelect::s_person_filter##}
+	</select><br>
+	<input class="form-control" type="text" value="{##@modulSelect::s_person##}" maxlength="10" size="10" id="s_person" name="s_person" onfocusout="this.form.submit();">
+</div>
+<div id="searchFilterTitle" style="width:100px">
+	<label title="{##@modulSelect::max_weightTitle##}">{##&modulSelect::max_weightTitle##}</label>
+	<select class="form-control" id="s_max_weight_filter" name="s_max_weight_filter" onfocusout="this.form.submit();">
+		{##@modulSelect::s_max_weight_filter##}
+	</select><br>
+	<input class="form-control" type="text" value="{##@modulSelect::s_max_weight##}" maxlength="10" size="10" id="s_max_weight" name="s_max_weight" onfocusout="this.form.submit();">
+</div>
+##/listFilterForm##

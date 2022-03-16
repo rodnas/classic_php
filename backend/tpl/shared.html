@@ -1,0 +1,160 @@
+##listForm1Box##
+<div style="clear:both;height: 10px;"></div>
+<div class="row">
+	<div class="col-sm-8">
+		##START##config#navigationHTML##STOP##
+	</div>
+	<div class="col-sm-4">
+		##START##config#navigationAddTopHTML##STOP##
+		##START##config#navigationBackHTML##STOP##
+	</div>
+</div>
+<div style="clear:both;height: 1px;"></div>
+	<div id='contentFrame'>##START##config#contentListHTML##STOP##</div>
+<div style="clear:both;height: 15px;"></div>
+<div class="row">
+	<div class="col-sm-8">
+		##START##config#navigationHTML##STOP##
+	</div>
+	<div class="col-sm-4">
+		##START##config#navigationAddBottomHTML##STOP##
+		##START##config#navigationBackHTML##STOP##
+	</div>
+</div>
+<div style="clear:both;height: 1px;"></div>
+##/listForm1Box##
+##listForm2Box##
+<div id="contentFrame" style="border:0 !important;">
+<div style="float:left">##START##config#listFilterLeftHTML##STOP##</div>
+<div style="margin-right:5px;float:left;">
+<div style="float:left;min-width: 340px;padding-left: 5px;width:100%;">
+<div style="clear:both;height: 10px;"></div>
+<div class="row">
+	<div class="col-sm-8">
+		##START##config#navigationHTML##STOP##
+	</div>
+	<div class="col-sm-4">
+		##START##config#navigationAddTopHTML##STOP##
+		##START##config#navigationBackHTML##STOP##
+	</div>
+</div>
+<div style="clear:both;height: 1px;"></div>
+	<div id='contentFrame' style='width:98%;'>##START##config#contentListHTML##STOP##</div>
+<div style="clear:both;height: 15px;"></div>
+<div class="row">
+	<div class="col-sm-8">
+		##START##config#navigationHTML##STOP##
+	</div>
+	<div class="col-sm-4">
+		##START##config#navigationAddBottomHTML##STOP##
+		##START##config#navigationBackHTML##STOP##
+	</div>
+</div>
+</div>
+</div>
+</div>
+<div style="clear:both;height: 1px;"></div>
+##/listForm2Box##
+##listForm##
+<listTopNavigation>
+<div style="clear:both;height: 10px;"></div>
+<div class="row">
+	<div class="col-sm-8">
+		{##navigationHTML##}
+	</div>
+	<div class="col-sm-4">
+		{##navigationAddTopHTML##}
+		{##navigationBackHTML##}
+	</div>
+</div>
+</listTopNavigation>
+<div style="clear:both;height: 1px;"></div>
+	<div id='contentFrame'>{##contentListHTML##}</div>
+<listBottomNavigation>
+<div style="clear:both;height:10px;"></div>
+<div class="row">
+	<div class="col-sm-8">
+		{##navigationHTML##}
+	</div>
+	<div class="col-sm-4">
+		{##navigationAddBottomHTML##}
+		{##navigationBackHTML##}
+	</div>
+</div>
+</listBottomNavigation>
+<div style="clear:both;height: 5px;"></div>
+##/listForm##
+##addForm##
+<form onSubmit="" enctype="multipart/form-data" method="post" name="{##modulAction##}form" action="{##actionForm##}">
+<input type="hidden" name="a" value="{##getAction##}">
+<input type="hidden" name="fieldFocus" value="{##x_fieldFocus##}">
+<input type="hidden" name="key" value="{##@itemValues::x_id##}">
+<input type="hidden" name="x_id" value="{##@itemValues::x_id##}">
+<input type="hidden" name="x_whichModul" value="{##whichModul##}">
+<input type="hidden" name="modulOperation" value="{##modulOperationNow##}">
+{##contentAddHTML##}
+{##navigationHTML##}
+</form>
+##/addForm##
+##editForm##
+<form onSubmit="" enctype="multipart/form-data" method="post" name="{##modulAction##}form" action="{##actionForm##}">
+<input type="hidden" name="a" value="{##getAction##}">
+<input type="hidden" name="fieldFocus" value="{##x_fieldFocus##}">
+<input type="hidden" name="key" value="{##@itemValues::x_id##}">
+<input type="hidden" name="x_id" value="{##@itemValues::x_id##}">
+{##contentEditHTML##}
+{##navigationHTML##}
+</form>
+##/editForm##
+##viewForm##
+<form onSubmit="" enctype="multipart/form-data" method="post" name="{##modulAction##}form" action="{##actionForm##}">
+<input type="hidden" name="a" value="{##getAction##}">
+<input type="hidden" name="key" value="{##key##}">
+{##contentViewHTML##}
+{##deleteReally##}
+{##navigationHTML##}
+</form>
+##/viewForm##
+##pdfForm##
+<form onSubmit="" enctype="multipart/form-data" method="post" name="{##modulAction##}form" action="{##actionForm##}">
+<input type="hidden" name="a" value="{##getAction##}">
+<input type="hidden" name="key" value="{##key##}">
+{##contentPDFHTML##}
+{##navigationHTML##}
+</form>
+##/pdfForm##
+##topSearchBasicForm##
+<div>
+	<div style='float:left'><b>{##configShare::searchTitle##}</b></div>
+	<div style='float:right'>
+		<button class='buttonBox' id='subMenuHeight24' title='{##configShare::searchTitle##}' name='submitSearch' type='submit' value=''><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+		{##configShare::searchFileterOff##}
+	</div>
+</div>
+<div style="clear:both;height:1px;"></div>
+<div id="searchTitle">
+	&nbsp<input class="form-control" type="text" name="{##modulSelect##}psearch" value="{##configShare::pSearchOriginal##}" size="22" maxlength="100" placeholder="{##configShare::searchTitle##}" onchange="this.form.submit();">&nbsp;
+</div>
+##/topSearchBasicForm##
+##listFilterForm##
+{##listFilterHTML##}
+##/listFilterForm##
+##themesSelectForm##
+	<div id="themesText">{##configShare::themesIDTitle##}</div>
+	<div id="topServiceSelectText">
+	<select class="form-control" style="background-color:{##actualBgColor##};color:{##actualFgColor##};border:2px solid;" onchange="this.form.submit();" name="x_core_themesFilterID">
+	{##core_themes::themesSelect##}
+	</select>
+	</div>
+##/themesSelectForm##
+##searchFilterBox##
+<div id="searchFilter">
+	<div style="clear:both;"></div>
+	<div id="searchBox">
+		{##topSearchBasicHTML##}
+	</div>
+	{##listFilterFullHTML##}
+	<div style="clear:both;"></div>
+</div>
+##/searchFilterBox##
+
