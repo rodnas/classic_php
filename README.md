@@ -1,4 +1,4 @@
-"# mediaorigo_classic_php"  
+"# classic_php"  
 git init git add README.md 
 git commit -m "first commit" 
 git branch -M main 
