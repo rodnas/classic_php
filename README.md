@@ -2,7 +2,7 @@
 git init git add README.md 
 git commit -m "first commit" 
 git branch -M main 
-git remote add origin https://github.com/rodnas/mediaorigo_classic_php.git 
+git remote add origin https://github.com/rodnas/classic_php.git 
 git push -u origin main
 
 PHP (procedural) version:
